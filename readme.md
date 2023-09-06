@@ -1,4 +1,4 @@
-## maddpg with PyTorch and PettingZoo
+# maddpg with PyTorch and PettingZoo
 
 The original version of [MADDPG](https://arxiv.org/pdf/1706.02275.pdf)
 use environment of  [multiagent-particle-envs](https://github.com/openai/multiagent-particle-envs),
@@ -7,11 +7,19 @@ A maintained version of these environments is provided
 by [PettingZoo](https://github.com/Farama-Foundation/PettingZoo).
 So this repository implement MADDPG using PyTorch and PettingZoo
 
-## Usage
+# Usage
 
-# 安装
+## 安装
 
+windows 
 
+Ubuntu(22.04)
+
+```shell
+sudo apt install swig
+sudo apt install cmake
+pip install -r requirements.txt
+```
 
 training and evaluation is simple and straightforward, take `simple_tag` for example:
 
