@@ -11,9 +11,9 @@ So this repository implement MADDPG using PyTorch and PettingZoo
 
 ## 安装
 
-windows 
+### windows 
 
-Ubuntu(22.04)
+### Ubuntu(22.04)
 
 ```shell
 sudo apt install swig
@@ -21,8 +21,8 @@ sudo apt install cmake
 pip install -r requirements.txt
 ```
 
+## training and evaluation
 training and evaluation is simple and straightforward, take `simple_tag` for example:
-
 ```shell
 python main.py simple_tag_v2  # training
 python evaluate.py simple_tag_v2 1  # evaluate result saved in folder 1
