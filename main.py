@@ -30,21 +30,21 @@ def get_env(env_name, ep_len=25):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('env_name', type=str, default='simple_adversary_v2', help='name of the env',
+    parser.add_argument('env_name', type=str, default='simple_adversary_v2', help='一个位置参数，表示环境的名称',
                         choices=['simple_adversary_v2', 'simple_spread_v2', 'simple_tag_v2'])
     parser.add_argument('--episode_num', type=int, default=30000,
-                        help='total episode num during training procedure')
-    parser.add_argument('--episode_length', type=int, default=25, help='steps per episode')
+                        help='训练过程中的总共的回合数')
+    parser.add_argument('--episode_length', type=int, default=25, help='每个回合的步数')
     parser.add_argument('--learn_interval', type=int, default=100,
-                        help='steps interval between learning time')
+                        help='学习时间之间的步数间隔')
     parser.add_argument('--random_steps', type=int, default=5e4,
-                        help='random steps before the agent start to learn')
-    parser.add_argument('--tau', type=float, default=0.02, help='soft update parameter')
-    parser.add_argument('--gamma', type=float, default=0.95, help='discount factor')
-    parser.add_argument('--buffer_capacity', type=int, default=int(1e6), help='capacity of replay buffer')
-    parser.add_argument('--batch_size', type=int, default=1024, help='batch-size of replay buffer')
-    parser.add_argument('--actor_lr', type=float, default=0.01, help='learning rate of actor')
-    parser.add_argument('--critic_lr', type=float, default=0.01, help='learning rate of critic')
+                        help='在智能体开始学习之前的随机步数')
+    parser.add_argument('--tau', type=float, default=0.02, help='软更新参数')
+    parser.add_argument('--gamma', type=float, default=0.95, help='折扣因子')
+    parser.add_argument('--buffer_capacity', type=int, default=int(1e6), help='回放缓冲区的容量')
+    parser.add_argument('--batch_size', type=int, default=1024, help='回放缓冲区的批量大小')
+    parser.add_argument('--actor_lr', type=float, default=0.01, help='行动者的学习率')
+    parser.add_argument('--critic_lr', type=float, default=0.01, help='评论者的学习率')
     args = parser.parse_args()
 
     # create folder to save result
